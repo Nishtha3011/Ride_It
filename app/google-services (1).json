@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "907549331676",
+    "project_id": "ride-it-6358a",
+    "storage_bucket": "ride-it-6358a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907549331676:android:97106df0f5d6d1da25e419",
+        "android_client_info": {
+          "package_name": "com.nish.ride_it"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfO7LHRQOQx92u7nHPqoF_AWh7DndHTBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

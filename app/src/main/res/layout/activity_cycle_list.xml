@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CycleList">
+
+    <!-- Hello, Name -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELLO,\nNISHTHA"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/toasty_milk"
+        android:textColor="@color/splash_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Profile icon -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_account"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp" />
+
+    <!-- Search bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Search your destination"
+
+        app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- FILTER Dropdown -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filterDropdownLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="FILTER"
+
+        app:layout_constraintTop_toBottomOf="@id/searchLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/filterDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:padding="12dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Add Cycle Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addCycleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+ Add your cycle for rental"
+        android:backgroundTint="#F57C00"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/txt_bold"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/filterDropdownLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Dummy Cycle Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cycleCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/addCycleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp">
+
+        <!-- LinearLayout with Vertical orientation for two cards stacked on top of each other -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First Card Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/sign_in_btn">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="G BLOCK"
+                        android:textColor="@color/splash_bg"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Owner Name: Shreya"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Reg. No. : 24BCE3425"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rentButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RENT"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F57C00"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/txt_bold"
+                        android:textSize="14sp"
+                        app:cornerRadius="8dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_bike_final"
+                    android:contentDescription="Cycle Image"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+            <!-- Second Card Layout (Same as the first one) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/sign_in_btn">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="G BLOCK"
+                        android:textColor="@color/splash_bg"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Owner Name: Anika"
+                        android:textStyle="bold"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Reg. No. : 24BCE3400"
+                        android:textSize="14sp"
+                        android:layout_marginTop="4dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/rent1Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RENT"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#F57C00"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/txt_bold"
+                        android:textSize="14sp"
+                        app:cornerRadius="8dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_bike_final"
+                    android:contentDescription="Cycle Image"
+                    android:layout_gravity="center_vertical"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

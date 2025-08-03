@@ -1,0 +1,9 @@
+<resources>
+
+    <style name="CustomAppButton" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/login_btn</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>
